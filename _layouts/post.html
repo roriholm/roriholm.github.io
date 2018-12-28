@@ -11,23 +11,7 @@ layout: default
 
         {{ page.date | date: "%A, %B %-d, %Y" }}
       </span>
-      <span class="in">
-        in
-      </span>
-      <span class="categories-on">
-        {% for category in page.categories%}
-        {{category}} &nbsp;{% if forloop.last %}{% else %},{% endif %}
-        {% endfor %}
-      </span>
-      {% if page.author %}
-      <br> <br>
-      <div class="written-by">
-        WRITTEN BY
-      </div>
-      <div class="author-name">
-        {{page.author}}
-      </div>
-      {% endif %}
+
     </div>
       </header>
 
