@@ -4,7 +4,9 @@ title: Blogs
 permalink: /blogs/
 ---
 
-Less technical blogs, having some amount of layman discussion:
+Here I'll maintain a list of the blogs that I try to keep up with!
+
+Less technical:
 
 * [Shtetl-Optimized (Scott Aaronson](https://www.scottaaronson.com/blog/)
 
@@ -12,7 +14,7 @@ Less technical blogs, having some amount of layman discussion:
 
 * [Slate Star Codex (Scott Alexander)](http://slatestarcodex.com/)
 
-More technical blogs which are just pure math:
+More technical:
 
 * [Property Testing Review](https://ptreview.sublinear.info/)
 
