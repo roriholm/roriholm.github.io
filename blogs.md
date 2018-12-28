@@ -4,7 +4,7 @@ title: Blogs
 permalink: /blogs/
 ---
 
-Here I'll maintain a list of the blogs that I try to keep up with!
+These are the blogs that I read.
 
 Less technical:
 
