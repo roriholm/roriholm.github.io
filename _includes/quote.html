@@ -21,8 +21,9 @@
     return this[Math.floor(Math.random() * this.length)]}
 
   function embed(id) {
-    var s = '<iframe width="200" src="https://www.youtube.com/embed/'
-    s = s + id + ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    var s = '<iframe width="200" src="https://www.youtube.com/embed/';
+    s = s + id + ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    console.log(s);
     return(s);
   }
   $(document).ready(function(){
