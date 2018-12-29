@@ -4,7 +4,7 @@ title:  "The birth of a website"
 date:   2018-12-28
 ---
 
-Welcome to my my new site! I decided to finally put my money where my mouth is and migrate out of Zuckerbag's twisted funhouse.
+Welcome to my new site! I decided to finally put my money where my mouth is and migrate out of Zuckerbag's twisted funhouse.
 
 I'll just use this to drop links, commentary, music, or whatever I want. Make sure to check back every 10 minutes to get that sweet nectar that I'm sure to provide.
 
