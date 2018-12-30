@@ -116,11 +116,13 @@ padding: 1em;
 
 a{
   color:lightblue !important;
+  border-bottom: 1px lightblue dotted;
 }
 
 a:hover{
   color: inherit;
-  border-bottom: 1px lightblue dotted;
+  text-decoration: none !important;
+  border-bottom: 1px lightgreen dotted;
 }
 .date-post{
   color: skyblue;
