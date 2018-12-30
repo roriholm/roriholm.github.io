@@ -8,7 +8,7 @@
 # Site settings
 title: Ro Ri H
 email: rorih@live.com
-description: My new site
+description: My Postings
 
 baseurl: "/" #e.g. /safarnama, /blog. Dont forget the '/'.
 url: "http://roriholm.github.io" # the base hostname & protocol for your site
