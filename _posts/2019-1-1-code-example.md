@@ -6,7 +6,7 @@ date:   2019-01-01
 
 I thought it would be fun to make a "video roulette" every time you load my site.
 
-To embed a YouTube video you need code that looks like this:
+When you go to embed a YouTube video, they give you code that looks like this:
 
 ~~~~
   <iframe width="200" src="https://www.youtube.com/embed/aq76zcJfUGc" showinfo="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -37,4 +37,4 @@ Now when I want to make my choice, it basically looks like:
 embeddingCode = title + ": " + embed(id);
 ~~~~
 
-Piece of cake!
+Piece of cake! It's super basic but gives me that warm, fuzzy feeling.
