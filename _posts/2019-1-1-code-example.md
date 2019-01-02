@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Code example"
+title:  "Code example: Video roulette"
 date:   2019-01-01
 ---
 
