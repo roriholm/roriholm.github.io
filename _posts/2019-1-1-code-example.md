@@ -6,7 +6,7 @@ date:   2019-01-01
 
 I thought it would be fun to make a "video roulette" every time you load my site.
 
-When you embed a YouTube video you put in code that looks like this:
+To embed a YouTube video you need code that looks like this:
 
 ~~~~
   <iframe width="200" src="https://www.youtube.com/embed/aq76zcJfUGc" showinfo="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -18,7 +18,7 @@ So the nicer solution is to include a helper function:
 
 ~~~~
   function embed(id) {
-    return("<iframe..." + id + "</iframe>");
+    return("<iframe..." + id + "...</iframe>");
   }
 ~~~~
 
