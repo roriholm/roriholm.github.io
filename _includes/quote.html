@@ -1,6 +1,6 @@
 <div class="quote-box">
   <div class="quote-of">
-    RANDUM VIDS
+    RANDUM VIDZ
   </div>
 <br><br><br><br>
   <div class="quote">
@@ -9,28 +9,28 @@
 </div>
 <script type="text/javascript">
 
-  var music = [["Christian Vander - Les Oiseaux en Colere II", "Ci6oi2Kv_2Y"],
+  var music = [["Angry Birds II", "Ci6oi2Kv_2Y"],
                 ["Magma - Otis", "GNkWac-Nm0A"],
-                ["Popol Vuh - Aguirre", "zdeIN3sYcfk"]
+                ["Aguirre", "zdeIN3sYcfk"],
+               ["Suspended in Gaffa", "V3XAeg3B0To"]
 
   ];
-  var funniez = [["Matt Berry: Happy New You", "otXlkWXGx7Q"],
-                ["Paul Rudd is Celery Man", "maAFcEU6atk"],
-                ["Xavier: Chief Beef Loco", "70VWPNb60rg"]
+  var funniez = [["Happy New You", "otXlkWXGx7Q"],
+                ["Celery Man", "maAFcEU6atk"],
+                ["Chief Beef Loco", "70VWPNb60rg"]
   ];
 
   Array.prototype.randomElement = function () {
     return this[Math.floor(Math.random() * this.length)]}
 
   function embed(id) {
-    var s = '<iframe width="200" src="https://www.youtube.com/embed/';
-    s = s + id + '" showinfo="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-    return(s);
+    return ('<iframe width="200" src="https://www.youtube.com/embed/' + id + '" showinfo="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   }
+  
   $(document).ready(function(){
     var song = music.randomElement();
     var funny = funniez.randomElement();
 
-$('.quote').html('SONGZ!<br> ' + song[0] + ' <br>' + embed(song[1]) + '<br> FUNNIEZ! <br>' + funny[0] + '<br>' + embed(funny[1]));
+$('.quote').html('Song:<br> ' + song[0] + ' <br>' + embed(song[1]) + '<br> Funny: <br>' + funny[0] + '<br>' + embed(funny[1]));
   })
 </script>
