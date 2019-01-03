@@ -8,4 +8,4 @@ The singer/keyboardist Aki Kubota has passed away. She was one of 4 personnel on
 
 She also played on their 2nd album and in another jazz/fusion band called Bondage Fruit. Check out her sick vocals and keyboard lines in this song, which is like a little 6 minute apocalypse:
 
-{% youtube 5sqVf02uuW8 %}
+{% include youtubePlayer.html id=5sqVf02uuW8 %}
