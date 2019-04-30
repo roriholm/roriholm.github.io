@@ -4,7 +4,7 @@ title: Blogs
 permalink: /blogs/
 ---
 
-These are the blogs that I read.
+These are some of the blogs that I read.
 
 
 
@@ -25,6 +25,8 @@ Computation
 * [Slate Star Codex (Scott Alexander)](http://slatestarcodex.com/)
 
 * [Qualia Computing](https://qualiacomputing.com/)
+
+In the future when I get my IQ augmented by nanomachines, I will add Terry Tao to the list.
 
 
 
