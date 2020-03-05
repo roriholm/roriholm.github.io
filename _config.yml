@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            RoRiH.com
 tagline:          Black Theme for Jekyll
 description:      "A toy website."
-url:              www.rorih.com
+url:              index.html
 baseurl:          /
                   # the optional subpath of your site, e.g. "/my-jekyll-site/"
                   # This will apply to all pages in your Jekyll site.
