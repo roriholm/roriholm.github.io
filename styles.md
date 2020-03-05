@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: _page
 title: Theme Styles
 ---
 
@@ -172,6 +172,7 @@ class InstrumentalSong < Song
   end
 end
 ```
+
 
 ## Blockquotes
 
