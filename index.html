@@ -1,23 +1,37 @@
 ---
 layout: default
+title: Home
 ---
+
 <div class="posts">
-  POSTS
-</div>
-<div class="post-content">
-  {% for post in site.posts %}
-  <div class="post-box">
-    <div class="post-title">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url | remove_first: '/'}}">
+        {{ post.title }}
+      </a>
+    </h1>
 
- <a class="post-title" href="{{post.url | prepend:site.baseurl }}" >{{post.title}}</a>
-      <br>
-    </div>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-     <span class="date-post"> {{ post.date | date: "%A, %B %-d, %Y" }}</span>
-
-    <div class="post-content-main" itemprop="articleBody">
-      {{ post.content }}
-    </div>
+    {{ post.content }}
   </div>
   {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
