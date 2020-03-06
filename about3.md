@@ -1,12 +1,7 @@
 ---
 layout: page
-title: About3
+title: Equations
 ---
-
-<p class="message">
-  Hi there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
-
 
 $$
 \begin{align*}
