@@ -10,7 +10,7 @@
         {% if collection.label != "pages" %}
           {{ collection.nav_label }}
           {% for page in site[collection.label] %}
-          <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ page.url }}">Click on {{ page.name }}</a>
+          <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ page.url }}">{{ page.name }} {{ page.path }} {{ page.title }}</a>
           {% endfor %}
         {% endif %}
       {% endfor %}
