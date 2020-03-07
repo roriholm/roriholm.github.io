@@ -8,8 +8,10 @@ tagline:          Black Theme for Jekyll
 description:      "A toy website."
 url:              index.html
 baseurl:          /
-                  # the optional subpath of your site, e.g. "/my-jekyll-site/"
-                  # This will apply to all pages in your Jekyll site.
+
+collections:
+  mathpages:
+    output: true
 
 author:
   name:           Robert Holmes

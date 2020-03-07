@@ -16,5 +16,11 @@
       {% endfor %}
     </nav>
 
+    <nav class="sidebar-nav">
+      {% for page in site.mathpages %}
+        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
+      {% endfor %}
+    </nav>
+
   </div>
 </div>
