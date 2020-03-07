@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            RoRiH.com
 tagline:          Black Theme for Jekyll
-description:      "A toy website."
+description:      "Welcome to the Rileypedia."
 url:              index.html
 baseurl:          /
 collections_dir:  content
@@ -13,11 +13,13 @@ collections_dir:  content
 collections:
   intros:
     output: true
+    nav_label: CFG INTRO
     order:
       - b.md 
       - a.md
   mathpages:
     output: true
+    nav_label: CFG INTRO
     sort_by: lesson
 
 author:
