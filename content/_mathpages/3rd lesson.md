@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Theme Styles
-lesson: 3
 ---
 
 ## Full Style Test

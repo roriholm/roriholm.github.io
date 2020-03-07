@@ -29,6 +29,11 @@ defaults:
       type: "intros"
     values:
       layout: "page"
+  - scope:
+      path: ""
+      type: "mathlessons"
+    values:
+      layout: "page"
 
 author:
   name:           Robert Holmes
