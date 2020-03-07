@@ -11,7 +11,7 @@ baseurl:          /
 
 collections_dir:  content
 collections:
-  intros:
+  about:
     output: true
     order: 
       - b.md
@@ -25,7 +25,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "intros"
+      type: "about"
     values:
       layout: "page"
   - scope:
