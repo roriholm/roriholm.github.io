@@ -6,11 +6,9 @@
     </div>
 
     <nav class="sidebar-nav">
-      {% for collection in site.collections%}
-        {%collection.nav_label}
-        {% for page in collection %}
-        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
-        {% endfor %}
+      {% for collection in site.collections %}
+        {{ collection.label }}
+
       {% endfor %}
 
       INTROS:
