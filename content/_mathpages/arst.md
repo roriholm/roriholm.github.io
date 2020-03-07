@@ -23,13 +23,13 @@ Contents:
 
       Here's an equation
 
-      $$\
+      $$
         A = B
       $$
 
       Can I do a right-aligned equation?
 
-      $A=B$
+      \($A=B$\)
 
 * # Part 3
 
