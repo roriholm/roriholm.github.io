@@ -28,9 +28,13 @@ Contents:
         A = B
       $$
 
-      Can I do a right-aligned equation?
+      The following is a math block:$$ 5 + 5 $$
 
-      \($A=B$\)
+      But next comes a paragraph with an inline math statement:\$$ 5 + 5 $$
+
+      $$ 5 + 5 $$
+
+      \$$ 5 + 5 $$
 
 * # Part 3
 
