@@ -14,9 +14,8 @@ collections:
   intros:
     output: true
     nav_label: CFG INTRO
-    order:
-      - b.md 
-      - a.md
+    order: [b.md, a.md]
+    
   mathpages:
     output: true
     nav_label: CFG INTRO

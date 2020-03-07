@@ -12,16 +12,6 @@
         <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
         {% endfor %}
       {% endfor %}
-
-      INTROS:
-      {% for page in site.intros %}
-        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
-      {% endfor %}
-      COUNTING:
-      {% for page in site.mathpages %}
-        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
-      {% endfor %}
-      NEW
     </nav>
 
   </div>
