@@ -13,7 +13,6 @@ collections_dir:  content
 collections:
   intros:
     output: true
-    nav_label: INTROS
     order: 
       - b.md
       - a.md
