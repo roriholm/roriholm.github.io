@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Equations
+title: AAAH! Equations
+lesson: 2
 ---
 
 Dooby Doo

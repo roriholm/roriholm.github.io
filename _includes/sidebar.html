@@ -6,17 +6,11 @@
     </div>
 
     <nav class="sidebar-nav">
-      {% assign pages_list = site.pages %}
-      {% for page in pages_list %}
-        {% if page.title != null %}
-          {% if page.category == "mathpages" %}
-            <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
-          {% endif %}
-        {% endif %}
+      INTROS:
+      {% for page in site.intros %}
+        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
       {% endfor %}
-    </nav>
-
-    <nav class="sidebar-nav">
+      COUNTING:
       {% for page in site.mathpages %}
         <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
       {% endfor %}

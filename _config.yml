@@ -8,10 +8,17 @@ tagline:          Black Theme for Jekyll
 description:      "A toy website."
 url:              index.html
 baseurl:          /
+collections_dir:  content
 
 collections:
+  intros:
+    output: true
+    order:
+      - b.md 
+      - a.md
   mathpages:
     output: true
+    sort_by: lesson
 
 author:
   name:           Robert Holmes
