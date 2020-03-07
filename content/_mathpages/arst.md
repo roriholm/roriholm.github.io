@@ -1,6 +1,6 @@
 ---
 title: AAAH! Equations
-lesson:2
+lesson: 2
 ---
 
 Dooby Doo
