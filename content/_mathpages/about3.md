@@ -1,5 +1,6 @@
 ---
 title: Equations
+lesson: 1
 ---
 
 Dooby Doo
