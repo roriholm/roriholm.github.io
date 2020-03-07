@@ -14,12 +14,21 @@ collections:
   intros:
     output: true
     nav_label: INTROS
-    order: [b.md, a.md]
+    order: 
+      -b.md
+      -a.md
 
   mathpages:
     output: true
     nav_label: COUNTING LESSONS
     sort_by: lesson
+
+defaults:
+  - scope:
+      path: ""
+      type: "intros"
+    values:
+      layout: "page"
 
 author:
   name:           Robert Holmes
