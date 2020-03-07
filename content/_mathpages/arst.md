@@ -13,15 +13,16 @@ toc: true
   * ## Part 2
 
       Here's an equation
+      
       $$\
         A = B
       $$
 
-# Part 3
+* # Part 3
 
-## Part 4
+  * ## Part 4
 
-## Part 5
+  * ## Part 5
 
 Dooby Doo
 
