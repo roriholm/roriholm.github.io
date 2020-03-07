@@ -3,6 +3,7 @@ title: AAAH! Equations
 lesson: 2
 toc: true
 ---
+Contents:
 * TOC
 {:toc}
 
@@ -12,8 +13,14 @@ toc: true
 
   * ## Part 2
 
+    * If I start typing here will it indent another paragraph?
+
+      What about here?
+
+    * Or here?
+
       Here's an equation
-      
+
       $$\
         A = B
       $$

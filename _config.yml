@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            RoRiH.com
-tagline:          Black Theme for Jekyll
+tagline:          
 description:      "Welcome to the Rileypedia."
 url:              index.html
 baseurl:          /
