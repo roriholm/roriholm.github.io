@@ -15,8 +15,8 @@ collections:
     output: true
     nav_label: INTROS
     order: 
-      -b.md
-      -a.md
+      - b.md
+      - a.md
 
   mathpages:
     output: true
