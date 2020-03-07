@@ -31,7 +31,7 @@ defaults:
       layout: "page"
   - scope:
       path: ""
-      type: "mathlessons"
+      type: "mathpages"
     values:
       layout: "page"
 
