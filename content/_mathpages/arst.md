@@ -1,6 +1,7 @@
 ---
 title: AAAH! Equations
 lesson: 2
+toc: true
 ---
 * TOC
 {:toc}

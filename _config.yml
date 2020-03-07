@@ -42,5 +42,6 @@ author:
 paginate:         5
 plugins:
   - jekyll-feed
+  - jekyll-toc
   - jekyll-gist
   - jekyll-paginate
