@@ -6,14 +6,16 @@ toc: true
 Contents:
 * TOC
 {:toc}
+----------------------
 
 * # Part 1
 
   Dingaling
 
   * ## Part 2
+      This paragraph shouldn't be indented
 
-    * If I start typing here will it indent another paragraph?
+    * This one should.
 
       What about here?
 
@@ -24,6 +26,10 @@ Contents:
       $$\
         A = B
       $$
+
+      Can I do a right-aligned equation?
+
+      $A=B$
 
 * # Part 3
 
