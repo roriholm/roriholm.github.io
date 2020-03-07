@@ -9,7 +9,7 @@
       {% for collection in site.collections %}
         {{ collection.nav_label }}
         {% for page in site[collection.label] %}
-        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ site.baseurl }}{{ page.url  | remove_first: '/' }}">{{ page.title }}</a>
+        <a class="sidebar-nav-item{% if page.url == page.url %} active{% endif %}" href="{{ page.url }}">{{ page.title }}</a>
         {% endfor %}
       {% endfor %}
     </nav>
