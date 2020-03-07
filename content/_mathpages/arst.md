@@ -3,6 +3,7 @@ title: AAAH! Equations
 lesson: 2
 toc: true
 ---
+----------------------
 Contents:
 * TOC
 {:toc}
