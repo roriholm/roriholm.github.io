@@ -6,22 +6,22 @@ toc: true
 * TOC
 {:toc}
 
-# Part 1
+* # Part 1
 
   Dingaling
 
-  ## Part 2
+  * ## Part 2
 
-    Here's an equation
-    $$\
-      A = B
-    $$
+      Here's an equation
+      $$\
+        A = B
+      $$
 
 # Part 3
 
-  ## Part 4
+## Part 4
 
-  ## Part 5
+## Part 5
 
 Dooby Doo
 
