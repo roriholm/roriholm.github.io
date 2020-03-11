@@ -1,0 +1,40 @@
+I"Š<p>I want to lay out some basic logic for counting things: Permutations, combinations, etc.</p>
+
+<p>An alphabet of size <script type="math/tex">n</script>. The alphabet is a set of letters <script type="math/tex">A = \set{\alpha_1, \alpha_2, \dots, \alpha_n}</script>.</p>
+
+<p>Letâ€™s start with the basic concept of a <script type="math/tex">\emph{string}</script>.</p>
+
+<p>Choose some number of elements in a row. <script type="math/tex">\alpha_1 alpha_3 alpha_8 alpha_{44}</script>.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$$</td>
+      <td>A</td>
+      <td>= n$$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A lot of counting problems become easier when you put them in terms of strings.</p>
+
+<p><strong>Permutations</strong> are strings that use every letter <strong>exactly</strong> once.</p>
+
+<p><strong>Combinations</strong> are strings that use every letter <strong>at most</strong> once.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*} %]]></script>
+:ET

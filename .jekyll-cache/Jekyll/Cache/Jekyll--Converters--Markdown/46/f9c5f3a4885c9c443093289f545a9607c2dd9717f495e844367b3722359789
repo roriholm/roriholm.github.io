@@ -1,10 +1,7 @@
----
-title: About
----
-
-[here]({% link _counting/introduction.md %})
+I"<p><a href="/counting/introduction.html">here</a></p>
 
 <p class="message">
   Hi there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-  Here's a link to part  [here]({% link _counting/introduction.md %})
+  Here's a link to part  [here](/counting/introduction.html)
 </p>
+:ET
