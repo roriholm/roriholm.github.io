@@ -1,9 +1,18 @@
 ---
-title: New lesson
-lesson: 5
+title: Introduction
+lesson: 1
 ---
 
-Dingle Dooby Doo
+I want to lay out some basic logic for counting things: Permutations, combinations, etc.
+
+An alphabet of size $$n$$. The alphabet is a set $$A = \set{\alpha_1, \alpha_2, \dots, \alpha_n}$$.
+
+Let's start with the basic concept of a $$\emph{string}$$.
+
+Choose some number of elements in a row. $$\alpha_1 alpha_3 alpha_8 alpha_{44}$$.
+
+\$$|A| = n$$
+
 
 $$
 \begin{align*}

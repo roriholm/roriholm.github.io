@@ -7,7 +7,7 @@ title:            RoRiH.com
 tagline:          
 description:      "Welcome to the Rileypedia."
 url:              index.html
-baseurl:          /
+baseurl:          /roriholm
 
 collections_dir:  content
 collections:
@@ -17,9 +17,9 @@ collections:
       - b.md
       - a.md
 
-  mathpages:
+  counting:
     output: true
-    nav_label: COUNTING LESSONS
+    nav_label: COUNTING
     sort_by: lesson
 
 defaults:
