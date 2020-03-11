@@ -5,13 +5,13 @@ lesson: 1
 
 I want to lay out some basic logic for counting things: Permutations, combinations, etc.
 
-An alphabet of size $$n$$. The alphabet is a set of letters $$A = \set{\alpha_1, \alpha_2, \dots, \alpha_n}$$.
+An alphabet of size $$n$$. The alphabet is a set of letters $$A = \{\alpha_1, \alpha_2, \dots, \alpha_n\}$$.
 
-Let's start with the basic concept of a $$\emph{string}$$.
+Let's start with the basic concept of a **string**.
 
 Choose some number of elements in a row. $$\alpha_1 alpha_3 alpha_8 alpha_{44}$$.
 
-\$$|A| = n$$
+$$|A| = n$$
 
 A lot of counting problems become easier when you put them in terms of strings.
 
