@@ -14,7 +14,6 @@ collections:
   about:
     output: true
     order: 
-      - b.md
       - a.md
 
   counting:
