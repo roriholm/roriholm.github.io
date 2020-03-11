@@ -7,7 +7,7 @@ title:            RoRiH.com
 tagline:          
 description:      "Welcome to the Rileypedia."
 url:              index.html
-baseurl:          /roriholm
+baseurl:          /
 
 collections_dir:  content
 collections:
