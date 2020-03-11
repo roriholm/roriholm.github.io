@@ -30,7 +30,7 @@ defaults:
       layout: "page"
   - scope:
       path: ""
-      type: "mathpages"
+      type: "counting"
     values:
       layout: "page"
 
