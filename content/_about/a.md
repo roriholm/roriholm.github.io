@@ -2,9 +2,4 @@
 title: About
 ---
 
-[here]({% link _counting/introduction.md %})
-
-<p class="message">
-  Hi there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-  Here's a link to part  [here]({% link _counting/introduction.md %})
-</p>
+A place for me to chew, digest, and regurgitate whatever I feel like. <rorih@live.com>
