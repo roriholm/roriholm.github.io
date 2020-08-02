@@ -1,6 +1,7 @@
 ---
 title: Counting Rudiments
 lesson: 1
+status: green
 ---
 
 ----------------------
@@ -8,6 +9,10 @@ Contents:
 * TOC
 {:toc}
 ----------------------
+
+<div class="message" markdown="1">
+   If you can't count, you **don't** count.
+</div>
 
 I want to lay out some basic logic for counting things: Permutations, combinations, etc.
 
@@ -24,8 +29,6 @@ What if we have an alphabet with only two letters, and we want to write a 2-lett
 | $$\alpha_1$$                       | $$\alpha_1\alpha_1$$                         | $$\alpha_1\alpha_2$$                         |
 | $$\alpha_2$$                       | $$\alpha_2\alpha_1$$                         | $$\alpha_2\alpha_2$$                         |
 
-
-
 For your first choice, you have 2 letters to choose from. For your 2nd choice, you have 2 letters to choose from. So there are $$2\times2=4$$ possibilities. If our alphabet had 3 letters you can imagine the $$3\times3$$ version of the table.
 
 How about if $$l=3$$? We can start with the table above, adding $$\alpha_1$$ to the end of each string. Then our table doubles. A 2nd layer comes out of the screen with all the same strings augmented by $$\alpha_2$$. The possibilities are $$2\times2\times2 = 8$$.
@@ -40,10 +43,15 @@ $$\overbrace{n\times n \times n \times \cdots \times n}^{l \text{ times}} = n^l.
 
   Now you should be able to answer these questions fairly easily.
 
-    $$\cdot$$ How many 3-letter initials are possible? (For example, I'm R.R.H.)
+    * How many 3-letter initials are possible? (For example, I'm R.R.H.)
+      <details><summary>Solution</summary>
+      $$n = 26, l = 3 \longrightarrow n^l = 26^3$$
+      </details>
 
-    $$\cdot$$ How high can a computer count with 8 bits? (IE, $$A = \{0, 1\}$$)
-
+    * How high can a computer count with 8 bits? (IE, $$A = \{0, 1\}$$)
+      <details><summary>Solution</summary>
+      $$n = 2, l = 8 \longrightarrow n^l = 2^8$$
+      </details>
 
 # Permutations
 
@@ -90,9 +98,9 @@ $$n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1 = n!$$
     
     You're lining up 5 people to take a photograph. We already know there are $$5! = 120$$ ways to order them.
 
-    $$\cdot$$ What if the most dominant member insists on standing in the middle?
+    * What if the most dominant member insists on standing in the middle?
 
-    $$\cdot$$ What if there are 2 identical twins, and it doesn't matter if they switch places?
+    * What if there are 2 identical twins, and it doesn't matter if they switch places?
 
 # Subsets
 
@@ -100,19 +108,19 @@ At this point we're going to make a crucial change, and stop caring about **orde
 
 Imagine you have 10 precious toe-rings: Agate, Amethyst, Citrine, Diamond, Emerald, Onyx, Quartz, Ruby, Sapphire, and Turqoise. Every day when you leave home to your job as a surfing teacher, you select a **subset** of them to adorn your toes.
 
-  $$\cdot$$ If you're feeling depressed and bring ZERO toe rings, you've brought a subset.
+  1 If you're feeling depressed and bring ZERO toe rings, you've brought a subset.
 
-  $$\cdot$$ If you have designs on a certain student and it's a Ruby and Emerald day, you've brought a subset.
+  2 If you have designs on a certain student and it's a Ruby and Emerald day, you've brought a subset.
 
-  $$\cdot$$ If you bring a toe ring on EVERY TOE, you've brought a subset (namely, the whole set).
+  3 If you bring a toe ring on EVERY TOE, you've brought a subset (namely, the whole set).
 
 Get the picture? **So, how many subsets are there of your 10 toe-rings?**
 
 We can reduce this to a question about **strings** if we notice that each toe-ring is in one of two states: It's either on your foot making everyone jealous, or it's languishing at home in your special designated drawer. So, make an alphabet with 2 letters. I'll use $$0$$ and $$1$$. Then the 3 cases above correspond to:
 
-  $$\cdot$$ 0000000000
-  $$\cdot$$ 0000100100
-  $$\cdot$$ 1111111111
+  1 0000000000
+  2 0000100100
+  3 1111111111
 
 But wait! Our question has become: 
 
@@ -124,7 +132,7 @@ $$\overbrace{2\times 2 \times 2 \times \cdots \times 2}^{n \text{ times}} = 2^n.
 
   * ## Questions
 
-      $$\cdot$$ You decide you feel silly if you're wearing only 1 toe ring. How many possibilities do we have if we exclude single-element subsets?
+      * You decide you feel silly if you're wearing only 1 toe ring. How many possibilities do we have if we exclude single-element subsets?
 
 # Combinations
 

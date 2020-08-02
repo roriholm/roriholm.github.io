@@ -1,0 +1,171 @@
+I"�%<hr />
+<p>Contents:</p>
+<ul id="markdown-toc">
+  <li><a href="#alphabets-and-strings" id="markdown-toc-alphabets-and-strings">Alphabets and Strings</a>    <ul>
+      <li><a href="#questions" id="markdown-toc-questions">Questions</a></li>
+    </ul>
+  </li>
+  <li><a href="#permutations" id="markdown-toc-permutations">Permutations</a>    <ul>
+      <li><a href="#k-permutations" id="markdown-toc-k-permutations"><script type="math/tex">k</script>-permutations</a></li>
+      <li><a href="#questions-1" id="markdown-toc-questions-1">Questions</a></li>
+    </ul>
+  </li>
+  <li><a href="#subsets" id="markdown-toc-subsets">Subsets</a>    <ul>
+      <li><a href="#questions-2" id="markdown-toc-questions-2">Questions</a></li>
+    </ul>
+  </li>
+  <li><a href="#combinations" id="markdown-toc-combinations">Combinations</a></li>
+</ul>
+<hr />
+
+<p>I want to lay out some basic logic for counting things: Permutations, combinations, etc.</p>
+
+<h1 id="alphabets-and-strings">Alphabets and Strings</h1>
+
+<p>An alphabet is a set of letters <script type="math/tex">A = \{\alpha_1, \alpha_2, \cdots, \alpha_n\}</script>. The alphabet is has <script type="math/tex">n</script> elements like this: <script type="math/tex">\|A\| = n</script>.</p>
+
+<p>Let’s start with the basic concept of a <strong>string</strong>. We <strong>string</strong> together letters in a row, with no restrictions or limitations. If <script type="math/tex">A</script> is the English alphabet in standard a-b-c order, then <script type="math/tex">\alpha_{18} \alpha_{15} \alpha_{18} \alpha_{9} \alpha_{8}</script> spells the word “rorih”.</p>
+
+<p>What if we have an alphabet with only two letters, and we want to write a 2-letter word? How many possibilities are there? Here’s a table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>1st \ 2nd</th>
+      <th><script type="math/tex">\alpha_1</script></th>
+      <th><script type="math/tex">\alpha_2</script></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><script type="math/tex">\alpha_1</script></td>
+      <td><script type="math/tex">\alpha_1\alpha_1</script></td>
+      <td><script type="math/tex">\alpha_1\alpha_2</script></td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">\alpha_2</script></td>
+      <td><script type="math/tex">\alpha_2\alpha_1</script></td>
+      <td><script type="math/tex">\alpha_2\alpha_2</script></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For your first choice, you have 2 letters to choose from. For your 2nd choice, you have 2 letters to choose from. So there are <script type="math/tex">2\times2=4</script> possibilities. If our alphabet had 3 letters you can imagine the <script type="math/tex">3\times3</script> version of the table.</p>
+
+<p>How about if <script type="math/tex">l=3</script>? We can start with the table above, adding <script type="math/tex">\alpha_1</script> to the end of each string. Then our table doubles. A 2nd layer comes out of the screen with all the same strings augmented by <script type="math/tex">\alpha_2</script>. The possibilities are <script type="math/tex">2\times2\times2 = 8</script>.</p>
+
+<p>To add a fourth letter, we take our “cubed” table and repeat the doubling process to get <script type="math/tex">2\times2\times2\times2 = 16</script> possible strings.</p>
+
+<p>The generalization goes like this: How many possible strings exist of length <script type="math/tex">l</script>, in an alphabet of size <script type="math/tex">n</script>? The answer is given by</p>
+
+<script type="math/tex; mode=display">\overbrace{n\times n \times n \times \cdots \times n}^{l \text{ times}} = n^l.</script>
+
+<ul>
+  <li>
+    <h2 id="questions">Questions</h2>
+
+    <p>Now you should be able to answer these questions fairly easily.</p>
+
+    <p><script type="math/tex">\cdot</script> How many 3-letter initials are possible? (For example, I’m R.R.H.)</p>
+
+    <p><script type="math/tex">\cdot</script> How high can a computer count with 8 bits? (IE, <script type="math/tex">A = \{0, 1\}</script>)</p>
+  </li>
+</ul>
+
+<h1 id="permutations">Permutations</h1>
+
+<p><strong>Permutations</strong> are orderings of a set. Put another way, they are <strong>strings</strong> that use every letter <strong>exactly</strong> once. Imagine 3 people lining up in a row for a photograph. Here are some possible orderings:</p>
+
+<script type="math/tex; mode=display">123 \quad 132 \quad 213 \quad 231 \quad 312 \quad 321</script>
+
+<p>Did I miss any?</p>
+
+<p>If we could clone people, like in <strong>strings</strong>, then there would be <script type="math/tex">3\times3\times3 = 27</script> possibilities!</p>
+
+<p>But when I pick the first person and lock in my choice, I only have 2 people to draw on for the next option. After I pick the 2nd, then I’m done having options. There’s only one left. That’s why there are <script type="math/tex">3\times2\times1 = 6</script> options here.</p>
+
+<p>What happens if I add a fourth person? Well, say I’m using the <script type="math/tex">123</script> ordering. Now there are four possible places for the new guy to stand:</p>
+
+<script type="math/tex; mode=display">*1*2*3*</script>
+
+<p>The same goes for each of the original 6 orderings. So now we have <script type="math/tex">4\times3\times2\times1 = 24</script> possibilities.</p>
+
+<p>So how many permutations exist for an <script type="math/tex">n</script>-element set?</p>
+
+<script type="math/tex; mode=display">n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1 = n!</script>
+
+<ul>
+  <li>
+    <h2 id="k-permutations"><script type="math/tex">k</script>-permutations</h2>
+
+    <p>Here’s a variant of permutations that will come in handy later. In this situation you have <script type="math/tex">n</script> elements to choose from, but you’re only going to choose <script type="math/tex">k</script> of them.</p>
+
+    <p>So, you’ve got 10 people, and you’re going to line up 3 of them for a photograph. How many possible photographs can you take?</p>
+
+    <p>The logic is similar: You have 10 for your first choice, 9 for your 2nd, and 8 for your 3rd. So the answer is:</p>
+
+    <script type="math/tex; mode=display">10 * 9 * 8 = 720</script>
+
+    <p>With the goal of relating it back to our <script type="math/tex">n!</script> formula let’s write it as</p>
+
+    <script type="math/tex; mode=display">10*9*8 = \frac{10*9*8*7*6*5*4*3*2*1}{7*6*5*4*3*2*1} = \frac{10!}{7!} = \frac{10!}{(10-3)!}</script>
+
+    <p>All the numbers on the bottom cancel out. So the general formula for a <script type="math/tex">k</script>-permutation of <script type="math/tex">n</script> elements, denoted <script type="math/tex">(n)_k</script> is</p>
+
+    <script type="math/tex; mode=display">(n)_k = \frac{n!}{(n-k)!}</script>
+  </li>
+  <li>
+    <h2 id="questions-1">Questions</h2>
+
+    <p>You’re lining up 5 people to take a photograph. We already know there are <script type="math/tex">5! = 120</script> ways to order them.</p>
+
+    <p><script type="math/tex">\cdot</script> What if the most dominant member insists on standing in the middle?</p>
+
+    <p><script type="math/tex">\cdot</script> What if there are 2 identical twins, and it doesn’t matter if they switch places?</p>
+  </li>
+</ul>
+
+<h1 id="subsets">Subsets</h1>
+
+<p>At this point we’re going to make a crucial change, and stop caring about <strong>order</strong>.</p>
+
+<p>Imagine you have 10 precious toe-rings: Agate, Amethyst, Citrine, Diamond, Emerald, Onyx, Quartz, Ruby, Sapphire, and Turqoise. Every day when you leave home to your job as a surfing teacher, you select a <strong>subset</strong> of them to adorn your toes.</p>
+
+<p><script type="math/tex">\cdot</script> If you’re feeling depressed and bring ZERO toe rings, you’ve brought a subset.</p>
+
+<p><script type="math/tex">\cdot</script> If you have designs on a certain student and it’s a Ruby and Emerald day, you’ve brought a subset.</p>
+
+<p><script type="math/tex">\cdot</script> If you bring a toe ring on EVERY TOE, you’ve brought a subset (namely, the whole set).</p>
+
+<p>Get the picture? <strong>So, how many subsets are there of your 10 toe-rings?</strong></p>
+
+<p>We can reduce this to a question about <strong>strings</strong> if we notice that each toe-ring is in one of two states: It’s either on your foot making everyone jealous, or it’s languishing at home in your special designated drawer. So, make an alphabet with 2 letters. I’ll use <script type="math/tex">0</script> and <script type="math/tex">1</script>. Then the 3 cases above correspond to:</p>
+
+<p><script type="math/tex">\cdot</script> 0000000000
+  <script type="math/tex">\cdot</script> 0000100100
+  <script type="math/tex">\cdot</script> 1111111111</p>
+
+<p>But wait! Our question has become:</p>
+
+<p>How many strings of length 10 can I make with a 2-letter alphabet? It turns out there are <script type="math/tex">2^{10} = 1024</script> toe-ring subsets.</p>
+
+<p>So in general, the number of subsets of $n$ items is</p>
+
+<script type="math/tex; mode=display">\overbrace{2\times 2 \times 2 \times \cdots \times 2}^{n \text{ times}} = 2^n.</script>
+
+<ul>
+  <li>
+    <h2 id="questions-2">Questions</h2>
+
+    <p><script type="math/tex">\cdot</script> You decide you feel silly if you’re wearing only 1 toe ring. How many possibilities do we have if we exclude single-element subsets?</p>
+  </li>
+</ul>
+
+<h1 id="combinations">Combinations</h1>
+
+<p>Here’s where things start to get juicy. We’re going to look at subsets of different sizes.</p>
+
+<p>Let’s stick with the toe-rings since that’s all you know - toe-rings are your passion, after all. We can ask: how many subsets are there consisting of 2 rings? Let’s write it as</p>
+
+<script type="math/tex; mode=display">{10\choose 2}</script>
+:ET
