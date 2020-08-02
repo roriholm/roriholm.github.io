@@ -67,7 +67,24 @@ So how many permutations exist for an $$n$$-element set?
 
 $$n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1 = n!$$
 
-*Permutations are important in group theory, and I'll hopefully write about that soon and add a link here.*
+
+  * ## $$k$$-permutations
+
+    Here's a variant of permutations that will come in handy later. In this situation you have $$n$$ elements to choose from, but you're only going to choose $$k$$ of them.
+
+    So, you've got 10 people, and you're going to line up 3 of them for a photograph. How many possible photographs can you take?
+
+    The logic is similar: You have 10 for your first choice, 9 for your 2nd, and 8 for your 3rd. So the answer is:
+
+    $$10 * 9 * 8 = 720$$
+
+    With the goal of relating it back to our $$n!$$ formula let's write it as
+
+    $$10*9*8 = \frac{10*9*8*7*6*5*4*3*2*1}{7*6*5*4*3*2*1} = \frac{10!}{7!} = \frac{10!}{(10-3)!}$$
+
+    All the numbers on the bottom cancel out. So the general formula for a $$k$$-permutation of $$n$$ elements, denoted $$(n)_k$$ is
+
+    $$(n)_k = \frac{n!}{(n-k)!}$$
 
   * ## Questions
     
@@ -108,3 +125,60 @@ $$\overbrace{2\times 2 \times 2 \times \cdots \times 2}^{n \text{ times}} = 2^n.
   * ## Questions
 
       $$\cdot$$ You decide you feel silly if you're wearing only 1 toe ring. How many possibilities do we have if we exclude single-element subsets?
+
+# Combinations
+
+Here's where things start to get juicy. We're going to look at subsets of different sizes. We'll call these $$k$$-subsets, or **combinations**.
+
+Let's stick with the toe-rings, since that's all you know - toe-rings are your passion, after all. 
+We can ask: how many subsets are there consisting of 2 rings? Let's write it as 
+
+$${10\choose 2}$$
+
+and say it as "Ten Choose Two". The first thing we notice is that if we choose 2 rings, then that's equivalent to choosing the 8 that get left in the drawer. So "Ten Choose Two" equals "Ten Choose Eight", or
+
+$${10\choose 2} = {10 \choose 8}.$$
+
+How do we actually calculate it? Well, let's do things a little backwards.
+
+Looking back at the section on $$k$$-permutations, let's think about the quantity  $$(10)_{2}$$.
+This is the number of ways we can arrange 2 rings, where order matters. We already know how to calculate this; but we can also write it in terms of combinations.
+
+Another way to find the number of $$k$$-permutations is to first choose your $$k$$-subset, and multiply it by the number of orderings. So we have the relationship
+
+$$(10)_{2} = {10\choose 2} \times 2!$$
+
+or generally
+
+$$(n)_k = {n \choose k} \times k!$$
+
+Solving for the new quantity we have
+
+$${n\choose k} = \frac{(n)_k}{k!} = \frac{n!}{(n-k)!k!}$$
+
+
+  * ## Combinations, forwards
+
+    Let's derive the same formula without working backwards from $$k$$-permutations.
+
+    We start with all $$10!$$ orderings of the full set. Now we only care about the rings that are in the first 2 "places". In other words,
+
+    **Emerald, Ruby**, Onyx, Quartz, Agate, Amethyst, Citrine, Diamond, Sapphire, and Turqoise
+
+    is the same for our purposes as 
+
+    **Emerald, Ruby**, Quartz, Onyx, Agate, Amethyst, Citrine, Diamond, Sapphire, and Turqoise,
+
+    or any other ordering of the list's tail. Since there are $$8!$$ ways to order the tail we're at $$\frac{10!}{8!}$$.
+
+    But that's not all. 
+
+    **Emerald, Ruby**, Onyx, Quartz, Agate, Amethyst, Citrine, Diamond, Sapphire, and Turqoise
+
+    is the same as 
+
+    **Ruby, Emerald**, Onyx, Quartz, Agate, Amethyst, Citrine, Diamond, Sapphire, and Turqoise.
+
+    So we quotient out another equivalence class to get the final answer
+
+    $${10 \choose 2} = \frac{10!}{8!2!} = \frac{10!}{(10-2)!2!}.$$
