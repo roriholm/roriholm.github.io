@@ -12,15 +12,17 @@ Contents:
 
 <div class="message" markdown="1">
    If you can't count, you **don't** count.
+
+   $$\qquad\qquad$$-**a grumpy old mathematician**
 </div>
 
-I want to lay out some basic logic for counting things: Permutations, combinations, etc.
+Here I'm going to lay out a basic tool kit for counting.
 
 # Alphabets and Strings
 
-An alphabet is a set of letters $$A = \{\alpha_1, \alpha_2, \cdots, \alpha_n\}$$. The alphabet is has $$n$$ elements like this: $$\|A\| = n$$.
+An alphabet is a set of letters $$A = \{\alpha_1, \alpha_2, \cdots, \alpha_n\}$$. This alphabet has $$n$$ elements.
 
-Let's start with the basic concept of a **string**. We **string** together letters in a row, with no restrictions or limitations. If $$A$$ is the English alphabet in standard a-b-c order, then $$\alpha_{18} \alpha_{15} \alpha_{18} \alpha_{9} \alpha_{8}$$ spells the word "rorih".
+A **string** is when we **string** together letters in a row, with no restrictions or limitations. If $$A$$ is the English alphabet in standard a-b-c order, then $$\alpha_{18} \alpha_{15} \alpha_{18} \alpha_{9} \alpha_{8}$$ spells the word "rorih".
 
 What if we have an alphabet with only two letters, and we want to write a 2-letter word? How many possibilities are there? Here's a table:
 
@@ -73,7 +75,7 @@ The same goes for each of the original 6 orderings. So now we have $$4\times3\ti
 
 So how many permutations exist for an $$n$$-element set?
 
-$$n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1 = n!$$
+$$n\times(n-1)\times(n-2)\times\cdots\times3\times2\times1 = n!$$
 
 
   * ## $$k$$-permutations
@@ -100,7 +102,15 @@ $$n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot3\cdot2\cdot1 = n!$$
 
     * What if the most dominant member insists on standing in the middle?
 
+      <details><summary>Solution</summary>
+      Now we only care about arranging the 4 people around the boss. So the answer is $$4! = 24$$
+      </details>
+
     * What if there are 2 identical twins, and it doesn't matter if they switch places?
+
+      <details><summary>Solution</summary>
+      Each of our 120 original permutations can be paired with its mirror, where the twins are switched. So the answer is $$120/2 = 60$$
+      </details>
 
 # Subsets
 
@@ -108,19 +118,22 @@ At this point we're going to make a crucial change, and stop caring about **orde
 
 Imagine you have 10 precious toe-rings: Agate, Amethyst, Citrine, Diamond, Emerald, Onyx, Quartz, Ruby, Sapphire, and Turqoise. Every day when you leave home to your job as a surfing teacher, you select a **subset** of them to adorn your toes.
 
-  1 If you're feeling depressed and bring ZERO toe rings, you've brought a subset.
+  * If you're feeling depressed and bring ZERO toe rings, you've brought a subset.
 
-  2 If you have designs on a certain student and it's a Ruby and Emerald day, you've brought a subset.
+  * If you have designs on a certain student and it's a Ruby and Emerald day, you've brought a subset.
 
-  3 If you bring a toe ring on EVERY TOE, you've brought a subset (namely, the whole set).
+  * If you bring a toe ring on EVERY TOE, you've brought a subset (namely, the whole set).
 
 Get the picture? **So, how many subsets are there of your 10 toe-rings?**
 
 We can reduce this to a question about **strings** if we notice that each toe-ring is in one of two states: It's either on your foot making everyone jealous, or it's languishing at home in your special designated drawer. So, make an alphabet with 2 letters. I'll use $$0$$ and $$1$$. Then the 3 cases above correspond to:
 
-  1 0000000000
-  2 0000100100
-  3 1111111111
+  * 0000000000
+
+  * 0000100100
+
+  * 1111111111
+
 
 But wait! Our question has become: 
 
@@ -132,7 +145,11 @@ $$\overbrace{2\times 2 \times 2 \times \cdots \times 2}^{n \text{ times}} = 2^n.
 
   * ## Questions
 
-      * You decide you feel silly if you're wearing only 1 toe ring. How many possibilities do we have if we exclude single-element subsets?
+      * You decide you feel silly if you're wearing only 1 toe ring, or if you have all 10 on. How many possibilities do we have if we exclude single-element subsets and the full set?
+
+        <details><summary>Solution</summary>
+        There are 10 single-element subsets, and 1 full set. So our answer is $$2^{10} - 11$$
+        </details>
 
 # Combinations
 
