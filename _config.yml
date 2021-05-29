@@ -16,6 +16,11 @@ collections:
     order: 
       - a.md
 
+  topos:
+    output: true
+    nav_label: CATEGORY & TOPOS
+    sort_by: lesson
+
   counting:
     output: true
     nav_label: COUNTING
@@ -30,6 +35,11 @@ defaults:
   - scope:
       path: ""
       type: "counting"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "topos"
     values:
       layout: "page"
 
