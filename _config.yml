@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            RoRiH.com
 tagline:          
-description:      "Welcome to the Rileypedia."
+description:      "Welcome to the Roripedia."
 url:              index.html
 baseurl:          /
 
@@ -15,11 +15,6 @@ collections:
     output: true
     order: 
       - a.md
-
-  topos:
-    output: true
-    nav_label: CATEGORY & TOPOS
-    sort_by: lesson
 
   counting:
     output: true
